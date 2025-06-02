@@ -28,6 +28,18 @@
     display: block;
   }
   
+  /* Hero into 1 */
+  .hero-intro-text1 {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    line-height: 1.6;
+  }
+  
   
   /* Navbar */
   .navbar {
@@ -678,9 +690,11 @@
   /* Home page our mission */
   .mission-section {
     padding: 60px 20px;
+    margin: 40px; /* ✅ This adds space outside the entire section */
     font-family: 'Segoe UI', sans-serif;
     background-color: #fff;
   }
+  
   
   .mission-title {
     font-size: 36px;
@@ -731,19 +745,25 @@
   }
   
   .mission-card.gray {
-    background-color: #5a616b;
+    background-color:  #233356;
+  }
+/* 
+  .mission-card-wrapper {
+    padding: 15px;
+  } */
+  
+  @media (max-width: 768px) {
+    .mission-section {
+      margin: 20px;
+      padding: 40px 15px;
+    }
   }
   
-  /* Responsive (Stack on smaller screens) */
-  @media (max-width: 768px) {
-    .mission-grid {
-      grid-template-columns: 1fr;
-    }
   
     .mission-title {
       text-align: center;
     }
-  }
+  
   .why-us-section {
     padding: 60px 20px;
     text-align: center;
@@ -811,8 +831,10 @@
   }
   
   .why-us-card.gray {
-    background-color: #333;
+    background-color:  #233356;
   }
+
+ 
   
   /* Responsive */
   @media (max-width: 768px) {
