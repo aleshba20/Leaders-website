@@ -105,6 +105,51 @@
     background: red;
     color: white;
   }
+
+  /* hamburger */
+  /* Hamburger button styles */
+/* Hamburger button styling */
+/* Hide hamburger on large screens */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  margin-left: auto;
+}
+
+/* Show hamburger only on small screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    padding-top: 10px;
+  }
+
+  .nav-links.show {
+    display: flex !important;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
+}
+
+
   
   /* Hero */
   .hero {
@@ -1154,6 +1199,350 @@
   border: 0;
 }
 
+/* Soft Skills section */
 
-  
-  
+/* Hero Image Section */
+.hero-banner-softskills {
+  background: url('images/photo-1530099486328-e021101a494a.png') center/cover no-repeat;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-banner-language{
+  background: url('images/langgaga.png') center/cover no-repeat;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+
+}
+
+.hero-banner-tutu{
+   background: url('images/tutututut.png') center/cover no-repeat;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.hero-banner-uniexam{
+   background: url('images/uniiiiii.png') center/cover no-repeat;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.hero-banner-uniexam::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45); /* dark overlay */
+}
+
+.hero-banner-tutu::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45); /* dark overlay */
+}
+
+.hero-banner-language::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45); /* dark overlay */
+}
+
+.hero-banner-softskills::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45); /* dark overlay */
+}
+
+.hero-text {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero-text h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+/* Below the banner: Section Intro */
+.course-intro {
+  background: #fff;
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.course-intro h2 {
+  color: #e30613;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.course-intro h3 {
+  font-size: 22px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.course-intro p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Course Section */
+
+.course-section {
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.course-title {
+  text-align: center;
+  font-size: 28px;
+  color: #e30613;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.course-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.course-text {
+  flex: 1 1 55%;
+}
+
+.course-text h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.course-text ul {
+  list-style: none;
+  padding: 0;
+  color: #333;
+}
+
+.course-text li {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.7;
+  display: flex;
+  align-items: flex-start;
+}
+
+.course-text .icon {
+  margin-right: 10px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.course-image {
+  flex: 1 1 35%;
+}
+
+.course-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Reverse Courses */
+
+/* Existing reused styles (no change needed) from previous response */
+/* Shared Layout (if not already in your file) */
+.course-section {
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #001f3f; /* Navy Blue */
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #fff; /* Base text color */
+}
+
+.course-title {
+  text-align: center;
+  font-size: 28px;
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.course-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.course-text {
+  flex: 1 1 55%;
+}
+
+.course-text h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.course-text p,
+.course-text li {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #dddddd;
+}
+
+.course-image {
+  flex: 1 1 40%;
+}
+
+.course-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.full-width-bg {
+  background-color: #001f3f; /* or your center’s navy blue */
+  width: 100%;
+}
+
+.course-section, .mavericks-section {
+  color: white; /* white text for contrast on dark bg */
+}
+
+
+/* --------------- */
+.mavericks-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+}
+
+.mavericks-title {
+  text-align: center;
+  font-size: 28px;
+  color: #e30613;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.mavericks-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mavericks-image {
+  flex: 1 1 40%;
+}
+
+.mavericks-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.mavericks-text {
+  flex: 1 1 55%;
+}
+
+.mavericks-text h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.mavericks-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mavericks-wrapper {
+    flex-direction: column;
+  }
+
+  .mavericks-image,
+  .mavericks-text {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .mavericks-text h3 {
+    margin-top: 20px;
+  }
+}
+
+
+/* --------------- */
+.course-section1 {
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color:red; /* Navy Blue */
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #fff; /* Base text color */
+}
+
+.full-width-bg1 {
+  background-color: red; /* or your center’s navy blue */
+  width: 100%;
+}
