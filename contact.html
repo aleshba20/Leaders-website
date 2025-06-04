@@ -121,14 +121,34 @@
             Please fill the below form for more details. Our representative will
             be in touch with you soon.
           </p>
-          <form>
-            <input type="text" placeholder="Your Name*" required />
-            <input type="email" placeholder="Your Email*" required />
-            <input type="tel" placeholder="Phone Number*" required />
-            <textarea rows="4" placeholder="Message"></textarea>
+
+          <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name*" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email*"
+              required
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone Number*"
+              required
+            />
+            <textarea
+              name="message"
+              rows="4"
+              placeholder="Message"
+              required
+            ></textarea>
             <button type="submit">Submit</button>
           </form>
+
+          <!-- ✅ Message placeholder -->
+          <div id="formMessage" class="form-message"></div>
         </div>
+
         <div class="contact-image">
           <img
             src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=600"
@@ -156,9 +176,11 @@
     </section>
     <br />
     <br />
-    <a href="https://wa.me/97477706704" target="_blank">
+    <a href="https://wa.me/97477706704" target="_blank" class="whatsapp-float">
       <img src="images/whatsapp.png" alt="WhatsApp" class="whatsapp-icon" />
+      <span class="whatsapp-text">How can we help?</span>
     </a>
+
     <!-- Footer -->
     <footer class="site-footer">
       <div class="footer-container">
@@ -178,6 +200,8 @@
             <li>Languages</li>
             <li>Tuitions</li>
             <li>University Entrance</li>
+            <li>IT & Coding</li>
+            <li>Exam Preparations</li>
           </ul>
         </div>
 
@@ -216,5 +240,42 @@
         <a href="#"><i class="fab fa-youtube"></i></a>
       </div>
     </div>
+
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const formData = new FormData(this);
+          const data = Object.fromEntries(formData.entries());
+          const messageBox = document.getElementById("formMessage");
+
+          messageBox.textContent = "Sending...";
+          messageBox.style.color = "#555";
+
+          try {
+            const res = await fetch("/contact", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(data),
+            });
+
+            const result = await res.json();
+
+            if (result.success) {
+              messageBox.textContent = "✅ Your message has been received.";
+              messageBox.style.color = "green";
+              this.reset();
+            } else {
+              messageBox.textContent = result.error || "Something went wrong.";
+              messageBox.style.color = "red";
+            }
+          } catch (err) {
+            messageBox.textContent = "⚠️ Could not send message.";
+            messageBox.style.color = "red";
+          }
+        });
+    </script>
   </body>
 </html>
