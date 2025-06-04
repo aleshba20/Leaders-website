@@ -153,7 +153,7 @@
   
   /* Hero */
   .hero {
-    background: url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+    background: url('images/White\ Black\ Minimalist\ Professional\ Resume.png') center/cover no-repeat;
     height: 90vh;
     position: relative;
     color: white;
@@ -1224,7 +1224,7 @@
 }
 
 .hero-banner-tutu{
-   background: url('images/tutututut.png') center/cover no-repeat;
+   background: url('images/jfbkscfbakfchkasd.png') center/cover no-repeat;
   height: 90vh;
   position: relative;
   display: flex;
@@ -1546,3 +1546,15 @@
   background-color: red; /* or your center’s navy blue */
   width: 100%;
 }
+
+/* Whatsapp icon */
+
+.whatsapp-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      z-index: 1000;
+      cursor: pointer;
+    }
