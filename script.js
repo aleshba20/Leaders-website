@@ -95,3 +95,10 @@ window.addEventListener("load", () => {
     toggleCourse("leadership");
   }
 });
+
+const phone = "97477706704";
+const defaultMessage = encodeURIComponent(
+  "Hi, I'm messaging from the Leaders Education website: *Please Type your following enquiry after this text*"
+);
+const whatsappLink = `https://wa.me/${phone}?text=${defaultMessage}`;
+document.getElementById("whatsappLink").setAttribute("href", whatsappLink);
