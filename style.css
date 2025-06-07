@@ -738,6 +738,7 @@
     margin: 40px; /* ✅ This adds space outside the entire section */
     font-family: 'Segoe UI', sans-serif;
     background-color: #fff;
+    max-width: 1200px;
   }
   
   
@@ -751,8 +752,10 @@
   
   .mission-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
+     align-items: stretch;
+
   }
   
   .mission-card {
@@ -765,6 +768,8 @@
     align-items: center;
     min-height: 320px;
     box-sizing: border-box;
+    justify-content: space-between;
+     width: 100%;
   }
   
   .mission-card img {
@@ -798,16 +803,25 @@
   } */
   
   @media (max-width: 768px) {
-    .mission-section {
-      margin: 20px;
-      padding: 40px 15px;
-    }
+  .mission-section {
+    margin: 20px auto;
+    padding: 40px 15px;
   }
-  
-  
-    .mission-title {
-      text-align: center;
-    }
+
+  .mission-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-card {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.mission-title {
+  text-align: center;
+}
+
   
   .why-us-section {
     padding: 60px 20px;
