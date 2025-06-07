@@ -118,7 +118,6 @@
   cursor: pointer;
   color: #000;
   margin-left: auto;
-   z-index: 1002;
 }
 
 /* Show hamburger only on small screens */
@@ -127,27 +126,12 @@
     display: block;
   }
 
-  /* .nav-links {
+  .nav-links {
     display: none;
     flex-direction: column;
     width: 100%;
     gap: 15px;
     padding-top: 10px;
-  } */
-
-  @media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    width: 100%;
-    background: white;
-    padding: 20px;
-    z-index: 1001;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   }
 
   .nav-links.show {
@@ -847,30 +831,22 @@
     color: #222;
   }
   
-  /* .why-us-grid {
+  .why-us-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;                
-    padding: 0 80px;           
-    margin-top: 50px;         
-  } */
-   @media (max-width: 768px) {
-  .why-us-grid {
-    grid-template-columns: 1fr !important;
-    padding: 0 20px;
-    gap: 20px;
+    gap: 40px;                  /* spacing between cards */
+    padding: 0 80px;            /* more space on left & right */
+    margin-top: 50px;           /* space from subtitle above */
   }
   
   
   .why-us-card {
-    padding: 50px 35px;         
-      margin: 0 auto;             
+    padding: 50px 35px;         /* more inner padding inside the card */
+    margin: 20px;               /* more space around each card */
     border-radius: 12px;
     color: white;
     text-align: center;
     transition: transform 0.3s;
-      width: 100%;
-    max-width: 100%;
   }
   
   .why-us-card:hover {
@@ -1634,5 +1610,5 @@
 }
 
 
-   }
-  }
+
+
