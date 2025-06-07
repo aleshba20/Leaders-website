@@ -733,72 +733,76 @@
   }
 
   /* Home page our mission */
-.mission-section {
-  padding: 60px 20px;
-  margin: 40px auto;
-  max-width: 1200px;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fff;
-}
+  .mission-section {
+    padding: 60px 20px;
+    margin: 40px; /* ✅ This adds space outside the entire section */
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff;
+    max-width: 1200px;
+  }
+  
+  
+  .mission-title {
+    font-size: 36px;
+    color: red;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+     align-items: stretch;
 
-.mission-title {
-  font-size: 36px;
-  color: red;
-  font-weight: 700;
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-.mission-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  align-items: stretch;
-  justify-content: center;
-}
-
-.mission-card {
-  padding: 40px 30px;
-  border-radius: 8px;
-  text-align: center;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 360px;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 100%;
-}
-
-.mission-card img {
-  width: 60px;
-  margin-bottom: 20px;
-}
-
-.mission-card h3 {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-.mission-card p {
-  font-size: 15px;
-  line-height: 1.7;
-  color: #fff;
-}
-
-/* Background colors */
-.mission-card.red {
-  background-color: #e61e26;
-}
-
-.mission-card.gray {
-  background-color: #233356;
-}
-
-@media (max-width: 768px) {
+  }
+  
+  .mission-card {
+    padding: 40px 30px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 320px;
+    box-sizing: border-box;
+    justify-content: space-between;
+     width: 100%;
+  }
+  
+  .mission-card img {
+    width: 60px;
+    margin-bottom: 20px;
+  }
+  
+  .mission-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .mission-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #fff;
+  }
+  
+  /* Background colors */
+  .mission-card.red {
+    background-color: #e61e26;
+  }
+  
+  .mission-card.gray {
+    background-color:  #233356;
+  }
+/* 
+  .mission-card-wrapper {
+    padding: 15px;
+  } */
+  
+  @media (max-width: 768px) {
   .mission-section {
     margin: 20px auto;
     padding: 40px 15px;
